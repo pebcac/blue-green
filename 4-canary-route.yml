@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: green-canary
+  namespace: shard-share
+  annotations:
+    haproxy.router.openshift.io/balance: roundrobin
+spec:
+  host: service.example.com  # Use the same host as the main service
+  to:
+    kind: Service
+    name: green-service
+    weight: 50  
+  alternateBackends:
+  - kind: Service
+    name: blue-service
+    weight: 50
+

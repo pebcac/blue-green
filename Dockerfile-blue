@@ -1,0 +1,4 @@
+FROM nginxinc/nginx-unprivileged:stable-alpine
+RUN echo '<html><body style="background-color:blue;"><h1>Blue Server</h1></body></html>' > /usr/share/nginx/html/index.html
+RUN mkdir /var/cache/nginx/client_temp 
+

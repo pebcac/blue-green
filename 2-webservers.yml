@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/pebcac/blueweb:0.1
+        image: docker.io/pebcac/blue1:latest
         ports:
         - containerPort: 80
 ---
@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: docker.io/pebcac/greenweb:0.1
+        image: docker.io/pebcac/green1:latest
         ports:
         - containerPort: 80
 ---
